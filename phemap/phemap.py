@@ -157,7 +157,7 @@ class Phemap:
         'phecode_num': 495.0}
         """
 
-        m = self.phecodes['phecode'] == phecode
+        m = self.phecodes['phecode_num'] == float(phecode)
         matches = self.phecodes.loc[m].to_dict(orient='records')
 
         if matches:
@@ -231,7 +231,7 @@ class Phemap:
 
         """
 
-        m = self.phecodemap['phecode'] == phecode
+        m = self.phecodemap['phecode_num'] == float(phecode)
         phecode_match = self.phecodemap.loc[m]
 
         if len(phecode_match) > 0:

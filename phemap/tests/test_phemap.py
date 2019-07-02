@@ -59,10 +59,15 @@ def test_get_icd_for_phecode():
              'C50.8', 'C50', 'C50-C50.9', 'C50.0', 'C50.4',
              'C50.1', 'Z85.3', 'C50.9']
 
+    hep_icd = ['B16.0', 'B18.0', 'B16', 'B16.2', 
+               'B16.9', 'B18.1', 'B18.1', 'B16.1']
+
     # use set to ignore order
     assert set(phemap.get_icd_for_phecode('433.1')) == set(cvd_icd)
     assert set(phemap.get_icd_for_phecode('250.1')) == set(d_icd)
     assert set(phemap.get_icd_for_phecode('174.11')) == set(c_icd)
+    assert set(phemap.get_icd_for_phecode('070.2')) == set(hep_icd)
+    assert set(phemap.get_icd_for_phecode(70.2)) == set(hep_icd)
 
     with pytest.raises(ValueError):
         phemap.get_icd_for_phecode('ABC123')
