@@ -1,10 +1,15 @@
 import pytest
 import numpy as np
+import sys
+import os
+
+myPath = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, myPath + '/../')
 
 from phemap import Phemap
 
-source_file = 'phecode_definitions1.2.csv'
-mapping_file = 'phecode_map_v1_2_icd10_beta.csv'
+source_file = 'data/phecode_definitions1.2.csv'
+mapping_file = 'data/phecode_map_v1_2_icd10_beta.csv'
 
 phemap = Phemap(source_file=source_file, mapping_file=mapping_file)
 
