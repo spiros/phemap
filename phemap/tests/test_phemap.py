@@ -3,10 +3,10 @@ import numpy as np
 import sys
 import os
 
+from phemap import Phemap
+
 myPath = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, myPath + '/../')
-
-from phemap import Phemap
 
 source_file = 'data/phecode_definitions1.2.csv'
 mapping_file = 'data/phecode_map_v1_2_icd10_beta.csv'
