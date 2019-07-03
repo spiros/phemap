@@ -25,6 +25,7 @@ def test_get_phecode():
 
     with pytest.raises(ValueError):
         phemap.get_phecode_info('ABC123')
+        phemap.get_phecode_info()
 
 
 def test_match_icd_to_phecode():
@@ -42,6 +43,7 @@ def test_get_phecode_exclusions():
                   '411.8', '411.9', '414', '414.2']
 
     assert phemap.get_phecode_exclusions('411.2') == mi_exclude
+    assert phemap.get_phecode_exclusions(411.2) == mi_exclude
 
 
 def test_get_all_phecodes():
@@ -71,3 +73,4 @@ def test_get_icd_for_phecode():
 
     with pytest.raises(ValueError):
         phemap.get_icd_for_phecode('ABC123')
+        phemap.get_icd_for_phecode()
