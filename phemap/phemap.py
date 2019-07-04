@@ -30,7 +30,10 @@ import phemap
 ['J45.8', 'J45', 'J45.1', 'J45.0', 'J45.9']
 
 >>> phemap.get_phecode_for_icd10('J45.1')
-'495'
+['495']
+
+>>> phemap.get_phecode_for_icd10('B21.1')
+['202.2', '71.1']
 
 >>> phemap.get_phecode_info('495')
 {'phecode': '495',
@@ -177,7 +180,7 @@ class Phemap:
 
         Returns
         -------
-        phecode : string
+        phecodes : list of strings
 
         Raises
         ------
@@ -189,7 +192,10 @@ class Phemap:
         --------
 
         >>> phemap.get_phecode_for_icd10('J45.1')
-        '495'
+        ['495']
+
+        >>> phemap.get_phecode_for_icd10('B21.1')
+        ['202.2', '71.1']
 
         """
 
@@ -197,8 +203,7 @@ class Phemap:
         phecode_match = self.phecodemap.loc[m].to_dict(orient='records')
 
         if phecode_match:
-            phecode = self.get_phecode_info(phecode_match[0]['phecode'])
-            return phecode['phecode']
+            return [p['phecode'] for p in phecode_match]
         else:
             raise ValueError("Mapping for term not found: %s" % icd10)
 

@@ -29,9 +29,10 @@ def test_get_phecode():
 
 
 def test_match_icd_to_phecode():
-    assert phemap.get_phecode_for_icd10('I50') == '428.2'
-    assert phemap.get_phecode_for_icd10('C55') == '182'
-    assert phemap.get_phecode_for_icd10('C50.9') == '174.11'
+    assert phemap.get_phecode_for_icd10('I50') == ['428.2']
+    assert phemap.get_phecode_for_icd10('C55') == ['182']
+    assert phemap.get_phecode_for_icd10('C50.9') == ['174.11']
+    assert phemap.get_phecode_for_icd10('B21.1') == ['202.2', '71.1']
 
     with pytest.raises(ValueError):
         phemap.get_phecode_for_icd10('ABC123')
