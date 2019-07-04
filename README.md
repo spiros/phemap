@@ -1,4 +1,4 @@
-Phemap v. 0.1a [![Build Status](https://travis-ci.org/spiros/phemap.svg?branch=master)](https://travis-ci.org/spiros/phemap)
+Phemap [![Build Status](https://travis-ci.org/spiros/phemap.svg?branch=master)](https://travis-ci.org/spiros/phemap)
 --------------
 
 This utility provides some very basic functions
