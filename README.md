@@ -20,7 +20,9 @@ to match.
 
 Not all ICD-10 terms are mapped to phecodes and not all phecodes
 which are mapped to ICD-10 terms appear to have a valid definition
-in the phecode code.
+in the phecode code. Mappings are usually one-to-one but can also
+be one-to-many: 
+> Of all possible ICD-10 codes, 9,165 (76.20%) mapped to at least one PheCode, and 289 (2.40%) mapped to >1 PheCode.  ICD-10 code B21.1 (HIV disease resulting in Burkitt’s lymphoma) maps to two PheCodes: 071.1 (HIV infection, symptomatic) and 202.2 (Non-Hodgkin's lymphoma).
 
 Examples
 --------
