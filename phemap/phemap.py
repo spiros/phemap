@@ -1,4 +1,4 @@
-"""Phemap v. 0.1a
+"""Phemap
 
 This utility provides some very basic functions
 to map between ICD-10 terms used in hospital diagnoses
