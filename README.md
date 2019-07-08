@@ -3,7 +3,7 @@ Phemap [![Build Status](https://travis-ci.org/spiros/phemap.svg?branch=master)](
 
 This utility provides some very basic functions
 to map between ICD-10 terms used in hospital diagnoses
-for UK Biobank and Phecodes as outlined
+for UK Biobank and PheCodes as outlined
 in Wu P. et al. https://www.biorxiv.org/content/10.1101/462077v4
 
 Requires the phecode definitions file and the icd10-to-phecode
@@ -18,9 +18,9 @@ has been stripped out i.e. "I21.0 Ischaemic heart disease" is recorded
 as 'I210' so you will need to add the dot separator prior to attempting
 to match.
 
-Not all ICD-10 terms are mapped to phecodes and not all phecodes
+Not all ICD-10 terms are mapped to PheCodes and not all PheCodes
 which are mapped to ICD-10 terms appear to have a valid definition
-in the phecode code. Mappings are usually one-to-one but can also
+in the PheCodes definition file. Mappings are usually one-to-one but can also
 be one-to-many: 
 > Of all possible ICD-10 codes, 9,165 (76.20%) mapped to at least one PheCode, and 289 (2.40%) mapped to >1 PheCode.  ICD-10 code B21.1 (HIV disease resulting in Burkitt’s lymphoma) maps to two PheCodes: 071.1 (HIV infection, symptomatic) and 202.2 (Non-Hodgkin's lymphoma).
 
