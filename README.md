@@ -28,9 +28,13 @@ Examples
 --------
 
 ```
-import phemap
 
->>> phemap = phemap.Phemap( source_file=PHECODE_FILE, mapping_file=PHECODE_MAP )
+from phemap import Phemap
+
+source_file = 'data/phecode_definitions1.2.csv'
+mapping_file = 'data/phecode_map_v1_2_icd10_beta.csv'
+
+phemap = Phemap(source_file=source_file, mapping_file=mapping_file)
 
 >>> phemap.get_icd_for_phecode('495')
 ['J45.8', 'J45', 'J45.1', 'J45.0', 'J45.9']
