@@ -30,6 +30,8 @@ Examples
 ```
 import phemap
 
+>>> phemap = phemap.Phemap( source_file=PHECODE_FILE, mapping_file=PHECODE_MAP )
+
 >>> phemap.get_icd_for_phecode('495')
 ['J45.8', 'J45', 'J45.1', 'J45.0', 'J45.9']
 
