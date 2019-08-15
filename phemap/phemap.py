@@ -137,8 +137,8 @@ class Phemap:
 
         Parameters
         ----------
-        icd10 : string
-            A valid ICD-10 term.
+        p : string
+            A valid PheCode term.
 
         Returns
         -------
