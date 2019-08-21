@@ -28,7 +28,6 @@ Examples
 --------
 
 ```
-
 from phemap import Phemap
 
 source_file = 'data/phecode_definitions1.2.csv'
