@@ -2,7 +2,7 @@
 
 This utility provides some very basic functions
 to map between ICD-10 terms used in hospital diagnoses
-for UK Biobank and Phecodes as outlined
+for UK Biobank and PheCodes as outlined
 in Wu P. et al. https://www.biorxiv.org/content/10.1101/462077v4
 
 Requires the phecode definitions file and the icd10-to-phecode
